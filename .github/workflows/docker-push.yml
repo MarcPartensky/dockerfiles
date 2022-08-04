@@ -2,7 +2,7 @@ name: Build all then push
 
 on:
   schedule:
-  - cron: "0 4 * * *" # everyday at 4 am
+  - cron: "0 4 * * 0" # each sunday at 4 am
   push:
     branches:
       - master
