@@ -1,2 +1,2 @@
-FROM tnwhitweel/sslh:latest
+FROM tnwhitwell/sslh:latest
 RUN apk add curl
