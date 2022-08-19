@@ -1,3 +1,4 @@
-# Custom dockerfiles
+# Custom standalone dockerfiles
 
 - sslh
+- paru
