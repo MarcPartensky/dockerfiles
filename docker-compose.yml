@@ -3,3 +3,6 @@ services:
   sslh:
     image: marcpartensky/sslh
     build: sslh
+  paru:
+    image: marcpartensky/paru
+    build: paru
