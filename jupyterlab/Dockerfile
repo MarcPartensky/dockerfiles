@@ -1,9 +1,10 @@
+FROM python:alpine
+
 LABEL maintainer="https://github.com/marcpartensky"
 
 ENV TZ=Europe/Paris
 ENV JUPYTER_ENABLE_LAB=yes
 
-FROM python:alpine
 RUN pip3 install \
     'jupyterhub==1.3.*' \
     'notebook==6.*'
