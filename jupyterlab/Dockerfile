@@ -5,9 +5,9 @@ LABEL maintainer="https://github.com/marcpartensky"
 ENV TZ=Europe/Paris
 ENV JUPYTER_ENABLE_LAB=yes
 
-RUN pip3 install \
-    'jupyterhub==1.3.*' \
-    'notebook==6.*'
+RUN pip install \
+    jupyterhub \
+    notebook
 
 RUN useradd -m jupyter
 ENV HOME=/home/jupyter
