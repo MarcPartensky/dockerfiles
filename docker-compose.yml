@@ -6,3 +6,9 @@ services:
   paru:
     image: marcpartensky/paru
     build: paru
+  jupyterhub:
+    image: marcpartensky/jupyterhub
+    build: jupyterhub
+  jupyterlab:
+    image: marcpartensky/jupyterlab
+    build: jupyterlab
