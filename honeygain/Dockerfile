@@ -1,4 +1,4 @@
 FROM honeygain/honeygain
 
-COPY entrypoint.sh
+COPY entrypoint.sh ./
 ENTRYPOINT ["./entrypoint.sh"]
