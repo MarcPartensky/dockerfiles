@@ -15,3 +15,5 @@ services:
   honeygain:
     image: marcpartensky/honeygain
     build: honeygain
+  pawns:
+    image: marcpartensky/pawns
