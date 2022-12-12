@@ -14,4 +14,4 @@ services:
     build: jupyterlab
   honeygain:
     image: marcpartensky/honeygain
-    build: honegain
+    build: honeygain
