@@ -21,3 +21,6 @@ services:
   traffmonetizer:
     image: marcpartensky/traffmonetizer
     build: traffmonetizer
+  pgweb:
+    image: marcpartensky/pgweb
+    build: pgweb
