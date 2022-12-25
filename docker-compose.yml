@@ -24,3 +24,6 @@ services:
   pgweb:
     image: marcpartensky/pgweb
     build: pgweb
+  nixos:
+    image: marcpartensky/nixos
+    build: nixos
