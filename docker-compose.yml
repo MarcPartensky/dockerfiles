@@ -27,3 +27,6 @@ services:
   nixos:
     image: marcpartensky/nixos
     build: nixos
+  vaultwarden-ldap:
+    image: marcpartensky/vaultwarden-ldap
+    build: vaultwarden-ldap
