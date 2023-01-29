@@ -30,3 +30,6 @@ services:
   vaultwarden-ldap:
     image: marcpartensky/vaultwarden-ldap
     build: vaultwarden-ldap
+  cloudflared:
+    image: marcpartensky/cloudflared
+    build: cloudflared
