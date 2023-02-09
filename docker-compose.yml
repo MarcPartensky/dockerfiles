@@ -33,3 +33,6 @@ services:
   cloudflared:
     image: marcpartensky/cloudflared
     build: cloudflared
+  sqlmap:
+    image: marcpartensky/sqlmap
+    build: sqlmap
