@@ -1,0 +1,3 @@
+#!/bin/sh
+
+hydra -L $USERLIST -P $PASSWORDLIST $HOST $PROTOCOL

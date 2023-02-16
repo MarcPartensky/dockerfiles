@@ -36,3 +36,6 @@ services:
   sqlmap:
     image: marcpartensky/sqlmap
     build: sqlmap
+  hydra:
+    image: marcpartensky/hydra
+    build: hydra
