@@ -39,3 +39,6 @@ services:
   hydra:
     image: marcpartensky/hydra
     build: hydra
+  yt-dlp:
+    image: marcpartensky/yt-dlp
+    build: yt-dlp
