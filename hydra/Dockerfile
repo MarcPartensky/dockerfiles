@@ -1,3 +1,5 @@
 FROM alpine
+WORKDIR /root
 RUN apk add hydra
-ENTRYPOINT ["./entrypoint.sh"]
+COPY entrypoint.sh ./
+ENTRYPOINT ["/root/entrypoint.sh"]
