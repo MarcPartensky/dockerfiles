@@ -42,3 +42,8 @@ services:
   yt-dlp:
     image: marcpartensky/yt-dlp
     build: yt-dlp
+  gpg:
+    image: marcpartensky/gpg
+    build: gpg
+    volumes:
+      - /home/marc/Videos/Youtube:/srv/Youtube
