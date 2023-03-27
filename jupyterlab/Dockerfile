@@ -20,7 +20,7 @@ RUN pip install \
         jupyterlab \
         jupyterlab-git \
         jupyterlab-lsp \
-        # jupyter-lsp-python \
+        jupyter-lsp-python \
         jupyterlab-github
 
 # CMD ["jupyterhub-singleuser"]
