@@ -4,7 +4,7 @@ LABEL maintainer="https://github.com/marcpartensky"
 
 ENV TZ=Europe/Paris
 ENV JUPYTER_ENABLE_LAB=yes
-ENV PATH="${PATH}:/home/jupyter/.local"
+ENV PATH="$PATH:/home/jupyter/.local/bin"
 
 RUN apk add --update sudo gcc libc-dev linux-headers cargo
 RUN rm -rf /var/cache/apk/*
@@ -20,7 +20,7 @@ RUN pip install \
         jupyterlab \
         jupyterlab-git \
         jupyterlab-lsp \
-        jupyter-lsp-python \
+        # jupyter-lsp-python \
         jupyterlab-github
 
 # CMD ["jupyterhub-singleuser"]
