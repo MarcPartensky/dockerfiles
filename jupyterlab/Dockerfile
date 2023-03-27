@@ -21,4 +21,5 @@ RUN pip install -U pip\
         # jupyter-lsp-python \
         jupyterlab-github
 
-CMD ["jupyterhub-singleuser"]
+# CMD ["jupyterhub-singleuser"]
+CMD ["python", "-m", "jupyterlab"]
