@@ -12,5 +12,4 @@ COPY encryption.pub /
 RUN gpg --import encryption.pub
 RUN rm encryption.pub
 
-
-ENTRYPOINT ["/root/entrypoint.sh"]
+entrypoint ["/root/entrypoint.sh"]
