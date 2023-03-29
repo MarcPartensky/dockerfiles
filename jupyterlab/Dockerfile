@@ -29,5 +29,5 @@ RUN apk --purge del cargo apk-tools
 
 USER jupyter
 
-CMD ["/sbin/python", "-m", "jupyterhub-singleuser"]
-# CMD ["python", "-m", "jupyterlab"]
+# ENTRYPOINT ["jupyterhub-singleuser"]
+CMD ["jupyterhub-singleuser"]
