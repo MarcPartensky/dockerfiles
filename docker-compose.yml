@@ -47,3 +47,6 @@ services:
     build: gpg
     volumes:
       - /home/marc/Videos/Youtube:/srv/Youtube
+  kyber:
+    image: marcpartensky/kyber
+    build: kyber
