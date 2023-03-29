@@ -50,3 +50,6 @@ services:
   kyber:
     image: marcpartensky/kyber
     build: kyber
+  tableau-server:
+    image: marcpartensky/tableau-server
+    build: tableau-server
