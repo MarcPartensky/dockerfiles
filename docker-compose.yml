@@ -53,8 +53,3 @@ services:
   tableau-server:
     image: marcpartensky/tableau-server
     build: tableau-server
-  gpg:
-    image: marcpartensky/gpg
-    build: gpg
-    volumes:
-      - /home/marc/Videos/Youtube:/srv/Youtube
