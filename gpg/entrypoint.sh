@@ -1,10 +1,10 @@
 #!/bin/sh
 
-KEYRING=8E097DDB13F0722F
-RECIPIENT=marc@marcpartensky.com
+gpg --import $KEYS_PATH/signature.key
 
-gpg --import /root/signature.key
-
-7z a $1.7z $1
-gpg --always-trust --yes --sign --encrypt --recipient $RECIPIENT $1.7z
-rm $1.7z
+while true;
+do
+    date
+    echo sleeping 1000s
+    sleep 1000
+done

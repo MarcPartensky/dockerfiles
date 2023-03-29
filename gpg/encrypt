@@ -1,0 +1,5 @@
+#!/bin/sh
+
+7z a $1.7z $1
+gpg --always-trust --yes --sign --encrypt --recipient $RECIPIENT $1.7z
+rm $1.7z
