@@ -1,11 +1,17 @@
 #!/usr/bin/env python
+"""Kyber.keygen(): generate a keypair (pk, sk)"""
 
 import os
+from kyber_py import Kyber as KyberBuilder
+
+BIT_STRENGTH = os.environ.get("BIT") or "512"
 PK_PATH = os.environ.get("PK") or "pk"
 SK_PATH = os.environ.get("SK") or "sk"
 
-from kyber_py import Kyber512
-pk, sk = Kyber512.keygen()
+kyber_algorithm = "kyber_" + BIT_STRENGTH
+Kyber = KyberBuilder(DEFAULT_PARAMETERS[kyber_algorithm])
+
+pk, sk = Kyber.keygen()
 
 with open(PK_PATH, "wb") as pkf:
     pkf.write(pk)

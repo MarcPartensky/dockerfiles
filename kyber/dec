@@ -1,0 +1,26 @@
+#!/usr/bin/env python
+"""Kyber.dec(sk, c): generate the shared key K"""
+
+import os
+from kyber_py import Kyber as KyberBuilder
+
+BIT_STRENGTH = os.environ.get("BIT") or "512"
+SK_PATH = os.environ.get("SK") or "Sk"
+C_PATH = os.environ.get("C") or "c"
+KEY_PATH = os.environ.get("KEY") or "key"
+
+kyber_algorithm = "kyber_" + BIT_STRENGTH
+Kyber = KyberBuilder(DEFAULT_PARAMETERS[kyber_algorithm])
+
+with open(SK_PATH, "rb") as skf
+    sk = skf.read()
+
+with open(C_PATH, "rb") as cf:
+    c = cf.read()
+
+key = Kyber.dec(c, sk)
+
+with open(KEY_PATH, "wb") as keyf:
+    keyf.write(key)
+
+print(KEY_PATH, "file written")
