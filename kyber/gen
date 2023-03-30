@@ -1,4 +1,4 @@
 #!/usr/bin/env python
 
-from kyber import Kyber512
+from kyber_py import Kyber512
 print(Kyber512.keygen())
