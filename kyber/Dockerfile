@@ -1,11 +1,9 @@
 FROM marcpartensky/gpg
 
-RUN apk update
-RUN apk add cmake libssl-dev
+RUN apk add musl-dev gcc git py3-pip
+RUN git clone https://github.com/jack4818/kyber-py.git /root/git/kyber
+WORKDIR /root/git/kyber
+RUN pip install -r requirements.txt
+COPY gen /usr/bin
 
-WORKDIR /build
-RUN git clone https://github.com/jiep/kyber-gake /build
-RUN mkdir build
-WORKDIR /build/build
-RUN cmake -DCMAKE_BUILD_TYPE=Release ..
-RUN make
+ENTRYPOINT ["python"]
