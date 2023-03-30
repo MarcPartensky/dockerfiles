@@ -2,7 +2,7 @@
 """Kyber.dec(sk, c): generate the shared key K"""
 
 import os
-from kyber_py import Kyber as KyberBuilder
+from kyber import Kyber as KyberBuilder
 
 BIT_STRENGTH = os.environ.get("BIT") or "512"
 SK_PATH = os.environ.get("SK") or "Sk"
