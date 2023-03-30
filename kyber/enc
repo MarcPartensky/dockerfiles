@@ -12,7 +12,7 @@ KEY_PATH = os.environ.get("KEY") or "key"
 kyber_algorithm = "kyber_" + BIT_STRENGTH
 Kyber = KyberBuilder(DEFAULT_PARAMETERS[kyber_algorithm])
 
-with open(PK_PATH, "rb") as pkf
+with open(PK_PATH, "rb") as pkf:
     pk = pkf.read()
 
 c, key = Kyber.enc(pk)
