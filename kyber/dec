@@ -5,7 +5,7 @@ import os
 from kyber import Kyber as KyberBuilder, DEFAULT_PARAMETERS
 
 BIT_STRENGTH = os.environ.get("BIT") or "512"
-SK_PATH = os.environ.get("SK") or "Sk"
+SK_PATH = os.environ.get("SK") or "sk"
 C_PATH = os.environ.get("C") or "c"
 KEY_PATH = os.environ.get("KEY") or "key"
 
