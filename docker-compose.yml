@@ -53,3 +53,6 @@ services:
   tableau-server:
     image: marcpartensky/tableau-server
     build: tableau-server
+  wallabag:
+    image: marcpartensky/wallabag
+    build: wallabag
