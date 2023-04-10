@@ -56,3 +56,9 @@ services:
   wallabag:
     image: marcpartensky/wallabag
     build: wallabag
+  pqcrypto:
+    image: marcpartensky/pqcrypto
+    build: pqcrypto
+  libsodium:
+    image: marcpartensky/libsodium
+    build: libsodium
