@@ -62,3 +62,6 @@ services:
   libsodium:
     image: marcpartensky/libsodium
     build: libsodium
+  jupyterhub-singleuser:
+    image: marcpartensky/jupyterhub-singleuser
+    build: jupyterhub-singleuser
