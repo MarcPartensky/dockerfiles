@@ -68,3 +68,6 @@ services:
   gpt4all:
     image: marcpartensky/gpt4all
     build: gpt4all
+  djankiserv:
+    image: marcpartensky/djankiserv
+    build: djankiserv
