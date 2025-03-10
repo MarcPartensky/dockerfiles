@@ -85,4 +85,43 @@ services:
     build: n8n
   etherpad:
     image: marcpartensky/etherpad
-    build: etherpad
+    build: 
+      context: etherpad
+      args:
+        ETHERPAD_PLUGINS: |
+          ep_align
+          ep_headings2
+          ep_font_size
+          ep_table_of_contents
+          ep_adminpads3
+          ep_countable
+          ep_mathjax
+          ep_webhooks
+          ep_spellcheck
+          ep_font_family
+          ep_cursortrace
+          ep_who_did_what
+          ep_workspaces
+          ep_print
+          ep_mammoth
+          ep_scrolltoanchor
+          ep_comments_page
+          ep_line_spacing
+          ep_pad-lister
+          ep_copy_paste_select_all
+        # ETHERPAD_PLUGINS: |
+        # ep_padlist2 # pad lister is better
+        # ep_openid_connect
+        #ep_author_hover
+        #ep_embedded_hyperlinks
+          # ep_small_list
+          # ep_desktop_notifications # mal codé
+          # ep_set_title_on_pad # j'aime pas
+          # ep_markdown
+          # Bugués
+          # ep_themes
+          # ep_tables4
+          # ep_tables5
+          # ep_post_data
+          # ep_tableau
+          #i ep_previewimages
