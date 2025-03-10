@@ -45,24 +45,35 @@ RUN addgroup -S djankiserv && adduser -S djankiserv -G djankiserv \
     && mkdir -p /static /media \
     && chown -R djankiserv:djankiserv /app /static /media
 
-WORKDIR /app
+WORKDIR /app/src
+
+
+ENV DJANGO_SETTINGS_MODULE=djankiserv_api.settings
+ENV PYTHONPATH=/app/src
+ENV PORT=8000
+ENV ADDR=0.0.0.0
+
+RUN echo -e "#!/bin/sh\nsu-exec djankiserv python /app/src/djankiserv_cli/manage.py \$@\
+    " > /usr/local/bin/djankiserv && \
+    chmod +x /usr/local/bin/djankiserv
 
 # Entrypoint optimisé
 RUN echo $'#!/bin/sh\n\
 set -e\n\
 \n\
 # Attente PostgreSQL\n\
-until nc -z $DB_HOST $DB_PORT; do\n\
-  echo "Waiting for PostgreSQL..."\n\
-  sleep 1\n\
-done\n\
-\n\
+# until nc -z $DB_HOST $DB_PORT; do\n\
+#   echo "Waiting for PostgreSQL..."\n\
+#   sleep 1\n\
+# done\n\
+# \n\
 # Migrations et collectstatic\n\
-su-exec djankiserv python manage.py migrate --noinput\n\
-su-exec djankiserv python manage.py collectstatic --noinput\n\
+djankiserv migrate --noinput\n\
+djankiserv collectstatic --noinput\n\
 \n\
 # Exécution de l\'application\n\
-exec su-exec djankiserv gunicorn --bind 0.0.0.0:8000 --workers $(( $(nproc) * 2 + 1 )) config.wsgi:application\n\
+# exec su-exec djankiserv gunicorn --bind 0.0.0.0:8000 --workers $(( $(nproc) * 2 + 1 )) config.wsgi:application\n\
+djankiserv runserver $ADDR:$PORT\
 ' > /entrypoint.sh && chmod +x /entrypoint.sh
 
 VOLUME /static /media
