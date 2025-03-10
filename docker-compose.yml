@@ -71,3 +71,18 @@ services:
   djankiserv:
     image: marcpartensky/djankiserv
     build: djankiserv
+  postgres:
+    image: marcpartensky/postgres
+    build: postgres
+  photography:
+    image: marcpartensky/photography
+    build: photography
+  dbml-editor:
+    image: marcpartensky/dbml-editor
+    build: dbml-editor
+  n8n:
+    image: marcpartensky/n8n
+    build: n8n
+  etherpad:
+    image: marcpartensky/etherpad
+    build: etherpad
