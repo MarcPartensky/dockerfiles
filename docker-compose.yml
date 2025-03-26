@@ -107,21 +107,31 @@ services:
           ep_scrolltoanchor
           ep_comments_page
           ep_line_spacing
-          ep_pad-lister
           ep_copy_paste_select_all
-        # ETHERPAD_PLUGINS: |
-        # ep_padlist2 # pad lister is better
-        # ep_openid_connect
-        #ep_author_hover
-        #ep_embedded_hyperlinks
-          # ep_small_list
-          # ep_desktop_notifications # mal codé
-          # ep_set_title_on_pad # j'aime pas
-          # ep_markdown
-          # Bugués
-          # ep_themes
-          # ep_tables4
-          # ep_tables5
-          # ep_post_data
-          # ep_tableau
-          #i ep_previewimages
+          ep_padlisting
+          ep_pad-lister
+          ep_author_hover
+          ep_openid_connect
+          ep_user_displayname
+          ep_dividing_line
+          ep_author_neat2
+          ep_stable_authorid
+
+        # ep_authentication
+        # ep_oauth2
+        # ep_embedded_hyperlinks
+        # ep_padlist2
+        # ep_small_list
+        # ep_set_title_on_pad # j'aime pas
+        # ep_desktop_notifications # mal codé
+        # ep_markdown
+        # Bugués
+        # ep_themes
+        # ep_tables4
+        # ep_tables5
+        # ep_post_data
+        # ep_tableau
+        # ep_previewimages
+        # ep_allmende
+        # ep_embedmedia
+        # ep_whiteboard
