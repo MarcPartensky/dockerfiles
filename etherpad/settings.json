@@ -679,6 +679,7 @@
     "issuer": "${SSO_ISSUER:http://localhost:9001}",
       "clients": [
         {
+          "base_url": " ${BASE_URL}",
           "client_id": "${ADMIN_CLIENT:admin_client}",
           "client_secret": "${ADMIN_SECRET:admin}",
           "grant_types": ["authorization_code"],
@@ -686,6 +687,7 @@
           "redirect_uris": ["${ADMIN_REDIRECT:http://localhost:9001/admin/}"]
         },
         {
+          "base_url": " ${BASE_URL}",
           "client_id": "${USER_CLIENT:user_client}",
           "client_secret": "${USER_SECRET:user}",
           "grant_types": ["authorization_code"],
@@ -694,6 +696,18 @@
         }
       ]
     },
+
+  "ep_openid_connect": {
+    "issuer": "${SSO_ISSUER}",
+    "client_id": "${ADMIN_CLIENT}",
+    "client_secret": "${ADMIN_SECRET}",
+    "base_url": "${BASE_URL}",
+    "scope": ["profile", "email", "openid"],
+    "user_properties": {
+      "displayname": {"claim": "${DISPLAY_NAME:prefered_name}"},
+      "is_admin": {"claim": "etherpad_is_admin"}
+    }
+  },
 
   /* Set the time to live for the tokens
      This is the time of seconds a user is logged into Etherpad
