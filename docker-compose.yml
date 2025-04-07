@@ -135,3 +135,6 @@ services:
         # ep_allmende
         # ep_embedmedia
         # ep_whiteboard
+  beekeeper-studio:
+    image: marcpartensky/beekeeper-studio
+    build: beekeeper-studio
